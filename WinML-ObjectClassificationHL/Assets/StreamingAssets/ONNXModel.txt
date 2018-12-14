@@ -1,0 +1,1 @@
+PLACE HERE YOUR Custom Vision ONNX Model for Object Classification (rename it as ONNXModel.onnx)

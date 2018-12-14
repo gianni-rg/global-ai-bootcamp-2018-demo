@@ -1,0 +1,1 @@
+PLACE HERE YOUR Custom Vision ONNX Model for Object Detection (rename it as ONNXModel.onnx) and LABELS.TXT

@@ -1,0 +1,33 @@
+﻿@using ProductRecommender.Models
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Choose";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1><span class="glyphicon glyphicon-barcode"></span> Products Recommender</h1>
+
+<h3>Pick the product you best liked in the past</h3>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-block">
+                    <h3 class="card-title">@product.ProductName</h3>
+                    <a href="@Url.Action("Recommend", "Products", new { id = product.ProductID })" class="btn btn-primary">Choose me</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<hr />
+<div class="form-row">
+    <button type="button" class="btn btn-info" id="select" onclick="location.href='@Url.Action("Choose", "Products")'">
+        <span class="glyphicon glyphicon-ok"></span> Recommend Products
+    </button>
+</div>
+
+

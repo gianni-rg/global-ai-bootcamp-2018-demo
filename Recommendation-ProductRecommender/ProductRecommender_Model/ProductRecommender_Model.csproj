@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Amazon0302.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\Amazon0302.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="0.8.0" />
+    <PackageReference Include="Microsoft.ML.MatrixFactorization" Version="0.8.0" />
+  </ItemGroup>
+
+</Project>

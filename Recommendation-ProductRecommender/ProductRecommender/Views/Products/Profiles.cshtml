@@ -1,0 +1,24 @@
+﻿@using ProductRecommender.Models
+@model IEnumerable<Profile>
+@{
+}
+
+<h1><span class="glyphicon glyphicon-barcode"></span> Products Recommender</h1>
+<hr />
+<h3>Pick a buyer profile</h3>
+<br />
+
+<div class="row">
+    @foreach (var profile in Model)
+    {
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-block">
+                    <img src="~/images/@profile.ProfileImageName" width="100" height="100" align="bottom" class="img-circle" />
+                    <br /> <br>
+                    <a href="@Url.Action("Bought", "Products", new { id = profile.ProfileID })" style="font-size:26px" class="card-title">@profile.ProfileName</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="WinMLObjectDetection.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinMLObjectDetection">
+
+</Application>
