@@ -94,7 +94,7 @@ public class ONNXModelHelper
                 var loss = output.Loss[0][product];
                 TimeRecorder.Stop();
 
-                var lossStr = $"{(loss * 100.0f).ToString("#0.00")}%");
+                var lossStr = $"{(loss * 100.0f).ToString("#0.00")}%";
                 string timing = $"[{DateTime.Now.Hour:00}:{DateTime.Now.Minute:00}:{DateTime.Now.Second:00}] Eval took {TimeRecorder.ElapsedMilliseconds}ms";
                 string message = string.Empty;
                 if (loss >= accuracy)
